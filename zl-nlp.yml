@@ -1,0 +1,18 @@
+# For generic zoolander development.
+name: zl-dev
+root: ~/stripe/zoolander
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - editor:
+          - vi
+          - \:CtrlP
+        - tbox:
+          - ssh trainingbox1.nw
+          - cd ~/dev-ryan/zoolander
+          - source vendor/bin/activate
+        -
+  - sync:
+      panes:
+        - ss trainingbox1.nw zoolander
